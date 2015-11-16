@@ -1,0 +1,14 @@
+{
+    "name": "tryp-streamtip-notifier",
+    "version": "0.0.1",
+    "nodecgDependency": "~0.6.0",
+    "homepage": "http://twitch.tv/tryptech",
+    "authors": [
+        "tryptech"
+    ],
+    "description": "Notification overlay for StreamTip",
+    "license": "MIT",
+    "bundleDependencies": [
+    	"lfg-streamtip"
+    ]
+}

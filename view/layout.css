@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+
+* {
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+#tip_container {
+	width: 100%;
+	display: flex;
+}
+
+#tip_container.left {
+	justify-content: flex-start;
+}
+
+#tip_container.center {
+	justify-content: center;
+}
+
+#tip_container.right {
+	justify-content: flex-end;
+}
+
+#tip_notification {
+	color: rgb(41,216,74);
+	background-color: rgb(8,142,255);
+	line-height: 48px;
+	height: 75px;
+	min-width: 400px;
+	max-width: 1200px;
+	padding: 0 28px;
+	border: solid 3px #000;
+	border-radius: 75px;
+	margin: 28px 39px;
+	box-shadow: inset -15px 15px 0 rgb(27,255,255), 10px 10px 8px rgba(0,0,0,0.75);
+	position: relative;
+	opacity: 0;
+	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function:cubic-bezier(.55,0,.1,1);
+}
+
+#tip_notification.show {
+	opacity: 1;
+}
+
+#tip_tipper, #tip_tip span {
+	color :  -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,0)), color-stop(68%, rgba(255,255,255,0.68)), color-stop(100%, rgba(255,255,255,1)));
+	font-family: "Open Sans";
+	font-weight: 400;
+	font-size: 3em;
+	letter-spacing: -0.046875em;
+	text-shadow: 3px 0 #000,
+		0 3px #000,
+		-3px 0 #000,
+		0 -3px #000,
+		2px 2px #000,
+		-2px 2px #000,
+		2px -2px #000,
+		-2px -2px #000,
+		6px 6px #000;
+	z-index: 3;
+	position: relative;
+	float:left;
+}
+
+#tip_tipper::before {
+	font-weight: 700;
+	content: "Last Tip: ";
+	z-index: 3;
+}
+
+#tip_tipper::after {
+	content: attr(title);
+	-webkit-text-stroke: 10px black;
+	z-index:2;
+	position: absolute;
+	left:0;
+}
+
+#tip_tip {
+	font: inherit;
+	letter-spacing: inherit;
+	text-shadow: inherit;
+	z-index:inhert;
+	float: left;
+}
+

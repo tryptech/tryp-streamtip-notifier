@@ -1,0 +1,72 @@
+<div class="tryp-stn_panel">
+	<div class="button-group">
+		<button type="button" class="js-showTip btn btn-sm btn-block btn-primary" id="js-showTip">Show Tip</button>
+	</div>
+	<ul class="tryp-stn_tipList well" id="tryp-stn_tipList">
+		<!-- Populated by magic... -->
+	</ul>
+	<p></p>
+	<small>Total New Tips: <strong id="tryp-stn_totalNewTips"></strong></small>
+</div>
+
+<div class="modal fade" id="tryp-stn_settingsModal" tabindex="-1" role="dialog" aria-labelledby="tryp-stn_settingsModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cancel</span></button>
+				<h4 class="modal-title" id="tryp-stn_settingsModalLabel">Tips Settings</h4>
+			</div>
+			<div class="modal-body">
+				<form id="tryp-stn_settingsForm">
+					<div class="tryp-stn_displayMode" id="tryp-stn_displayMode">
+						<div class="form-group">
+							<label>Tip Display Mode</label>
+							<ul class="screen">
+								<li><label><input type="radio" name="displayMode" value="1" checked /><span>Immediate</span></label></li>
+								<li><label><input type="radio" name="displayMode" value="0" /><span>Interval</span></label></li>
+							</ul>
+						</div>
+					</div>
+					<div class="tryp-stn_displayTime" id="tryp-stn_displayTime">
+						<div class="form-group">
+							<label>Tip Display Time</label>
+							<div class="input-group">
+								<span class="input-group-addon">
+								Display Time (seconds)</span>
+								<input type="number" name="tipDisplayTime" class="form-control">
+							</div>
+							<div class="input-group" id="tryp-stn_displayPeriod">
+								<span class="input-group-addon">
+								Display Period (seconds)</span>
+								<input type="number" name="tipDisplayPeriod" class="form-control">
+							</div>
+						</div>
+					</div>
+					<div class="tryp-stn_screenPosition" id="tryp-stn_screenPosition">
+						<div class="form-group">
+							<label>Tip Alignment</label>
+							<ul class="screen">
+								<li><label><input type="radio" name="alignment" value="left" checked /><span>Left</span></label></li>
+								<li><label><input type="radio" name="alignment" value="center" /><span>Center</span></label></li>
+								<li><label><input type="radio" name="alignment" value="right" /><span>Right</span></label></li>
+							</ul>
+						</div>
+					</div>
+					<div class="tryp-stn_displayAmount" id="tryp-stn_displayAmount">
+						<div class="form-group">
+							<label>Display Amount</label>
+							<ul class="screen">
+								<li><label><input type="radio" name="displayAmount" value="1" checked /><span>Yes</span></label></li>
+								<li><label><input type="radio" name="displayAmount" value="0" /><span>No</span></label></li>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+				<input type="button" class="btn btn-primary btn-sm" id="tryp-stn_settingsModalButton" value="Save Settings" />
+			</div>
+		</div>
+	</div>
+</div>

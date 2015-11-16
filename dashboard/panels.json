@@ -1,0 +1,9 @@
+[
+	{
+		"name": "recent-tips",
+		"title": "Recent Tips",
+		"width": 2,
+		"file": "tip_panel.html",
+		"faIcon": "fa-paypal"
+	}
+]
